@@ -1,0 +1,23 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2019",
+    "module": "esnext",
+    "lib": ["DOM", "DOM.Iterable", "ESNEXT"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@primer-design-system/components": ["packages/components/src/index.ts"],
+      "@primer-design-system/foundations": ["packages/foundations/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

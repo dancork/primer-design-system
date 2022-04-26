@@ -1,0 +1,32 @@
+{
+  "root": "packages/foundations",
+  "sourceRoot": "packages/foundations/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/foundations",
+        "main": "packages/foundations/src/index.ts",
+        "tsConfig": "packages/foundations/tsconfig.lib.json",
+        "assets": ["packages/foundations/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/foundations/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/foundations"],
+      "options": {
+        "jestConfig": "packages/foundations/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
